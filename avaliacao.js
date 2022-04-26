@@ -47,7 +47,3 @@ form.addEventListener('submit', function(e) {
 
 
 });
-
-
-© 2022 GitHub, Inc.
-Terms
