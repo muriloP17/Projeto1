@@ -1,5 +1,5 @@
 function getMovieInfosOMDB(title){
-    const url = `http://www.omdbapi.com/?t=${title}&apikey=790af7bc`  
+    const url = `https://www.omdbapi.com/?t=${title}&apikey=790af7bc`  
        
     fetch(url)
     .then(response => response.json())
@@ -27,8 +27,8 @@ function getMovieInfosOMDB(title){
             movieRuntime.textContent = data.Runtime
             imdbRating.textContent = data.imdbRating
             movieInfo.textContent = data.Plot
-            movieWriter.textContent = data.Writer
-            movieDirector.textContent = data.Director
+            movieWriter.textContent = "Escrito por:" + data.Writer
+            movieDirector.textContent = "Dirigido por:" + data.Director
             moviePoster.style.backgroundImage = `url(${data.Poster})`
         }
         
